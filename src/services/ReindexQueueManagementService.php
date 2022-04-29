@@ -89,8 +89,13 @@ class ReindexQueueManagementService extends Component
     protected function removeJobFromQueue(int $id)
     {
         $queueService = Craft::$app->getQueue();
-        $methodName = $queueService instanceof \yii\queue\db\Queue ? 'remove' : 'release';
-        $queueService->$methodName($id);
+
+        if(method_exists($queueService, 'remove')){
+            $queueService->remove($id);
+        }
+        elseif(method_exists($queueService, 'release')){
+            $queueService->release($id);
+        }
     }
 
     /**

@@ -246,8 +246,8 @@ class ElementIndexerService extends Component
                 return $this->extractIndexablePart($res->getBody());
             }
         } catch (\GuzzleHttp\Exception\RequestException $e) {
-            Craft::error('Could not get element content: ' . $e->getMessage(), __METHOD__);
-            throw new IndexElementException($e->getMessage(), 0, $e);
+            Craft::error('Could not get element content. Getting element body instead: ' . $e->getMessage(), __METHOD__);
+            return $element->body;
         } catch (\Exception $e) {
             throw new IndexElementException(
                 Craft::t(

@@ -190,7 +190,7 @@ class ElasticsearchRecord extends ActiveRecord
             'cs'    => 'czech',
             'da'    => 'danish',
             'nl'    => 'dutch',
-            'pl'    => 'stempel', // analysis-stempel plugin needed
+            'pl'    => 'polish', // analysis-stempel plugin needed
             'en'    => 'english',
             'fi'    => 'finnish',
             'fr'    => 'french',
@@ -211,6 +211,7 @@ class ElasticsearchRecord extends ActiveRecord
             'pt'    => 'portuguese',
             'ro'    => 'romanian',
             'ru'    => 'russian',
+            'uk'    => 'ukrainian', // analysis-ukrainian plugin needed
             //sorani, Kurdish language is not part of the Craft locals...
             // 'sk' no analyzer available at this time
             'es'    => 'spanish',

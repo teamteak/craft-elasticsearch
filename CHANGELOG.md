@@ -3,6 +3,35 @@
 ## Unreleased
 
 
+## 2.1.1 - 2022-08-24
+### Changed
+- Change plugin icon
+- Update Readme
+
+
+## 2.1.0 - 2022-08-24
+### Added
+- Support for ukrainian language (thanks [@sfsmfc][], closes [#27][])
+### Fixed
+- Fix polish analyzer (thanks [@sfsmfc][], closes [#26][])
+- `isIndexInSync` will always result in a cache miss if index is not in sync 
+  (thanks [@aloco][], closes [#22][])
+
+
+## 2.0.0 - 2022-08-23
+### Added
+- [BREAKING]: Make the plugin compatible with Craft 4 (closes [#23][])
+
+
+## 1.5.1 – 2022-08-23
+### Fixed
+- Fix an incorrect default value for the `highlight.pre_tags` & 
+  `highlight.post_tags` settings, that could lead to an exception when running a
+  search
+- Fix a overridden setting warning shown even when the `blacklistedEntryTypes` 
+  setting isn't overriden
+
+
 ## 1.5.0 – 2021-12-14
 ### Added
 - Ability to index digital products (thanks [@aloco](https://github.com/aloco))
@@ -99,3 +128,9 @@ If your entries are not indexed anymore after upgrade, please check you network 
 
 [#16]: https://github.com/la-haute-societe/craft-elasticsearch/issues/16
 [#17]: https://github.com/la-haute-societe/craft-elasticsearch/issues/17
+[#22]: https://github.com/la-haute-societe/craft-elasticsearch/issues/22
+[#23]: https://github.com/la-haute-societe/craft-elasticsearch/issues/23
+[#26]: https://github.com/la-haute-societe/craft-elasticsearch/issues/26
+[#27]: https://github.com/la-haute-societe/craft-elasticsearch/issues/27
+[@sfsmfc]: https://github.com/sfsmfc
+[@aloco]: https://github.com/aloco
